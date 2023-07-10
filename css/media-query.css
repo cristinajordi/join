@@ -1,0 +1,238 @@
+@media (max-width: 750px) {
+    .bg {
+        width: unset;
+        flex-direction: column;
+        height: unset;
+    }
+    .contentDescription {
+        margin-left: unset;
+    }
+    .contentEdit {
+        margin-left: unset;
+        margin-top: -10px;
+        gap: 15px;
+    }
+    .iconBacklog {
+        width: 17px;
+    }
+    .sort {
+        display: none;
+    }
+    .contentCategory {
+        margin-left: unset;
+        padding: unset;
+    }
+    .contentAvatar {
+        align-items: unset;
+    }
+    .card-body {
+        padding: 7px;
+    }
+    .centerContainer {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}
+
+.animate {
+    -webkit-animation: animatezoom 0.4s;
+    animation: animatezoom 0.4s;
+}
+
+.slide-in {
+    -webkit-animation: slide 0.5s forwards;
+    animation: slide 0.5s forwards;
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+@-webkit-keyframes slide {
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slide {
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+
+/*#endregion */
+
+@media (max-width: 1200px) {
+    .board-col {
+        min-height: unset;
+        height: 35vh;
+    }
+}
+
+@media (min-width: 991px) {
+    #nav-res {
+        display: none;
+    }
+}
+
+@media (max-width: 999px) {
+    .col h3 {
+        font-size: 1rem;
+    }
+    .col {
+        margin-top: .6rem;
+        position: relative;
+    }
+    .board-col {
+        height: 15vh;
+        display: flex;
+        flex-direction: row;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+    }
+    .scroll-arrow {
+        position: absolute;
+        z-index: 9999;
+        top: 0;
+        border-radius: 100%;
+        background: gray;
+        border: 1px solid gray;
+        height: 24px;
+    }
+    .scroll-arrow-left {
+        right: 24px;
+    }
+    .scroll-arrow-right {
+        left: 24px;
+    }
+    .card-body-board {
+        max-width: 200px !important;
+        min-width: 200px;
+        margin: 0;
+        margin-right: .5rem;
+        margin-top: 0 !important;
+    }
+    .card-body-board p {
+        font-size: .7rem;
+        margin-bottom: 0;
+    }
+    .card-body-board h6 {
+        font-size: .7rem;
+        margin: 0 !important;
+    }
+    .card-body-board h5 {
+        font-size: .9rem;
+        margin: .1rem;
+    }
+}
+
+@media (max-width: 991px) {
+    #profil {
+        position: absolute;
+        bottom: unset;
+        left: unset;
+        top: 7px;
+        right: 20px;
+    }
+    #profil img {
+        width: 40px;
+        height: 40px;
+    }
+    #profil p {
+        display: none;
+    }
+    .board-col {
+        min-width: 60vw;
+    }
+    .col {
+        min-width: 60vw;
+    }
+    #navbar {
+        display: none;
+    }
+    .navbar-distance {
+        min-height: unset;
+        width: 100vw;
+        position: unset;
+        background-color: unset;
+    }
+    .container {
+        max-width: unset;
+        margin-left: unset;
+    }
+    .card {
+        flex-direction: column !important;
+    }
+    .card-header {
+        max-width: unset;
+        height: unset;
+        position: unset;
+    }
+    .navbar-brand {
+        padding-left: 5px;
+        padding-right: 15px;
+    }
+    .join-resp-logo {
+        display: flex;
+        margin: 0 !important;
+        padding: 0 !important;
+        justify-content: center;
+        margin-top: 0;
+    }
+    .join-resp-logo img {
+        position: absolute;
+        top: -5px;
+        left: 45vw;
+        display: inline-block;
+        margin-top: 1rem;
+        height: 2.5rem !important;
+        width: 2.5rem !important;
+        z-index: 9999;
+    }
+    .board-container {
+        flex-direction: column !important;
+    }
+    #nav-res {
+        display: flex;
+        flex-direction: column !important;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 700px) {
+    #formbl {
+        width: 80%;
+    }
+}
+
+@media (min-width: 999px) {
+    .scroll-arrow {
+        display: none;
+    }
+}
+
+@media (max-height: 500px) {
+    body {
+        height: unset;
+        min-height: 100vh;
+    }
+}

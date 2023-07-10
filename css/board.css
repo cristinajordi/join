@@ -1,0 +1,132 @@
+    .titleBoard {
+        margin-left: 179px;
+        margin-bottom: 50px;
+        margin-top: -31px;
+    }
+    
+    .board {
+        margin-top: 2rem;
+        margin-left: 2rem;
+        width: 80vw !important;
+        margin-left: -179px;
+    }
+    
+    .board-col {
+        height: 80vh;
+        background-color: #f4f3fb;
+        padding: 0.5rem;
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+    }
+    
+    .board-col::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .card-body-board {
+        padding: 0.5rem;
+        margin: 0.5rem;
+        margin-top: 0.5rem !important;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 8px rgb(0, 0, 0, 0.1);
+        border-radius: 8px;
+        background-color: white;
+    }
+    
+    .card-body-board:hover {
+        cursor: pointer;
+    }
+    
+    .card-body-board p {
+        font-size: 0.85rem;
+        color: #a5a5a5;
+    }
+    
+    .avatar-board {
+        border-radius: 100%;
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+    }
+    
+    .no-wrap {
+        flex-wrap: nowrap !important;
+    }
+    
+    .border-category {
+        border: 1px solid;
+        padding: 3px;
+    }
+    
+    .detail-card-board {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-height: 475px;
+        justify-content: space-around;
+        border-radius: 5px;
+        border: 2px solid rgba(0, 0, 0, 0.5);
+        box-shadow: -2px 0px 6px 0px rgb(0, 0, 0, 0.2);
+    }
+    
+    .detail-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    
+    #boardtasktitle {
+        margin-bottom: 1rem;
+    }
+    
+    #boardtaskurgency {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
+    
+    #boardtaskBy {
+        margin-top: 1rem;
+    }
+    
+    .pos-arrowleft {
+        position: absolute;
+        left: 1rem;
+        height: 2rem;
+        border-radius: 100%;
+        background: rgb(138, 138, 138);
+    }
+    
+    .pos-arrowright {
+        position: absolute;
+        right: 1rem;
+        height: 2rem;
+        border-radius: 100%;
+        background: rgb(138, 138, 138);
+    }
+    
+    .brd-btn {
+        margin-top: 20px !important;
+    }
+    
+    .pb-5 {
+        padding-bottom: 1rem !important;
+    }
+    
+    @media (max-width: 999px) {
+        .pb-5 {
+            padding-bottom: 0 !important;
+        }
+    }
+    
+    @media(max-height: 850px) {
+        .pb-5 h1 {
+            font-size: 1.2rem;
+        }
+        .pb-5 h4 {
+            font-size: 1rem;
+        }
+        .board-col {
+            min-height: 130px !important;
+        }
+    }

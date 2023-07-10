@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join</title>
+    <script src="js/mini_backend.js"></script>
+    <script src="js/script.js"></script>
+    <script defer src="js/Login.js"></script>
+    <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.min.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/Login.css" />
+    <link rel="stylesheet" href="../css/media-query.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+</head>
+
+<body onload="initLogin()">
+    <div class="containerLogin" id="container">
+        <form id="login" onsubmit="login(); return false;" novalidate>
+            <a class="mt-4"><img src="img/joinlogo.png" /></a>
+            <h1 class="form_title">Login</h1>
+            <div class="form_input_group">
+                <input type="text" class="form-input" id="loginUserName" autofocus placeholder="Username" required/>
+                <input type="text" style="display: none" class="form-input" id="log-username" required />
+                <div class="invalid-feedback">Username is not correct.</div>
+            </div>
+            <div class="form_input_group">
+                <input type="password" class="form-input" id="loginPassword" placeholder="Password" required/>
+                <input type="text" style="display: none" class="form-input" id="log-password" required />
+                <div class="invalid-feedback">Password is not correct.</div>
+            </div>
+            <button class="form_button" type="submit">Login</button>
+            <p class="form_text">
+                <a href="#" class="form_link" id="loginAsGuest" onclick="loginAsGuest()">Login as Guest</a>
+                <br /><br />
+                <a class="form_link" href="#" id="createAccount" onclick="createAcc()">Create an account</a>
+            </p>
+        </form>
+        <form id="register" class="form_hidden" onsubmit="registerUsers(); return false;" novalidate>
+            <h1 class="form_title">Register</h1>
+            <div class="form_input_group">
+                <input type="text" id="signupUsername" class="form-input" autofocus placeholder="Username" required/>
+                <div class="invalid-feedback">Please choose a username.</div>
+            </div>
+            <div class="form_input_group">
+                <input type="text" id="signupfirstname" class="form-input" autofocus placeholder="Firstname" required/>
+                <div class="invalid-feedback">Please choose a firstname.</div>
+            </div>
+            <div class="form_input_group">
+                <input type="text" id="signuplastname" class="form-input" autofocus placeholder="Lastname" required/>
+                <div class="invalid-feedback">Please choose a lastname.</div>
+            </div>
+            <div class="form_input_group">
+                <input id="userEmail" type="text" class="form-input" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" autofocus placeholder="E-mail" required/>
+                <div class="invalid-feedback">Please choose an email address.</div>
+            </div>
+            <div class="form_input_group">
+                <input id="signUpPassword" type="password" class="form-input" pattern=".{5,}" autofocus placeholder="Password" required/>
+                <div class="invalid-feedback">Your password must be include 5 or more character.</div>
+            </div>
+            <div class="mb-3">
+                <p class="form-label row m-1">Profil Picture</p>
+                <img title="neutral" id="userNew-1" onclick="selectNewUser(1)" src="img/guest-user.png" class="avatar avatar-selected" />
+                <img title="woman" id="userNew-2" onclick="selectNewUser(2)" src="img/woman-user.png" class="avatar" />
+                <img title="man" id="userNew-3" onclick="selectNewUser(3)" src="img/man-user.png" class="avatar" />
+            </div>
+            <button type="submit" class="form_button">Register</button>
+
+            <p class="form_text">
+                <a class="form_link" href="#" id="createAccount" onclick="sumbit()">you already have an account? click here for login.</a>
+            </p>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,489 @@
+body {
+    margin: 0;
+    font-family: "PT Sans";
+}
+
+.join-logo {
+    padding-left: 30px;
+}
+
+.profil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profil-responsive {
+    display: none;
+    position: absolute;
+}
+
+.profil img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 3px solid white;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.navbar-distance {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    position: fixed;
+    background-color: var(--blue);
+}
+
+.profil p {
+    color: white;
+}
+
+.footer {
+    display: flex;
+    font-size: 11px;
+    position: fixed;
+    left: 3px;
+    bottom: 10px;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.color-blue {
+    color: var(--blue);
+}
+
+.divider {
+    color: white;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+h4 {
+    color: var(--blue);
+}
+
+a {
+    cursor: pointer;
+}
+
+.ruler {
+    border-top: 1px solid white;
+    height: 1px;
+    position: relative;
+    left: 35px;
+    right: 0;
+    width: 60px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.card {
+    display: flex;
+    flex-direction: row !important;
+    --bs-card-inner-border-radius: unset;
+    border: unset;
+}
+
+.card-header {
+    max-width: 180px;
+    background-color: var(--blue) !important;
+    padding: 0;
+    height: 100vh;
+    left: 0;
+    top: 0;
+}
+
+.add-message {
+    font-size: 1.1rem;
+    color: gray;
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#backlogalert {
+    position: absolute;
+    bottom: 0;
+    right: 16px;
+    z-index: 999;
+}
+
+.card-alert {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    margin-top: 0.5rem !important;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 8px rgb(0 0 0 / 10%);
+    border-radius: 8px;
+    background-color: var(--violet);
+}
+
+
+/*#region Navigation */
+
+.navbar {
+    background-color: var(--blue) !important;
+    width: 153px;
+}
+
+.navbar-brand {
+    padding-left: 30px;
+    color: #c3c5cf;
+}
+
+.brd-left-active {
+    border-left: 5px solid #c3c5cf;
+    color: white;
+}
+
+.brd-left-inactive {
+    border-left: 5px solid transparent;
+}
+
+.navbar-brand:hover {
+    color: white;
+    border-left: 5px solid #c3c5cf;
+}
+
+
+/*#endregion*/
+
+
+/*#region Board -----------------CSS for Board ----------------- */
+
+.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+
+/*#endregion -----------------CSS for Backlog ----------------- */
+
+p {
+    font-size: 0.85rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.mail {
+    color: var(--mailblue);
+    margin-top: -14px;
+}
+
+.marginLeftTitle {
+    margin-left: calc(20px + 5px);
+}
+
+.marginLeftCatgegory {
+    margin-left: 170px;
+}
+
+.marginLeftUrgency {
+    position: absolute;
+    right: 10px;
+}
+
+.text {
+    margin-top: -5px;
+}
+
+.bg {
+    /* Tasks Container */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 8px;
+    border: 1px solid rgba(157, 153, 153, 0.1);
+    margin: 10px;
+    padding: 10px;
+    background-color: #f4f2fb;
+    width: 100%;
+    margin-left: 1px;
+    height: 120px;
+}
+
+.justify-content-center,
+.justify-content-end,
+.justify-content-around {
+    display: flex;
+}
+
+.unstyle-link {
+    text-decoration: none;
+    color: gray;
+}
+
+
+/* Colors of Urgency */
+
+.low {
+    border-right: 4px solid var(--low);
+}
+
+.p-low {
+    color: var(--low);
+}
+
+.high {
+    border-right: 4px solid var(--high);
+}
+
+.p-high {
+    color: var(--high);
+}
+
+.medium {
+    border-right: 4px solid var(--medium);
+}
+
+.p-medium {
+    color: var(--medium);
+}
+
+
+/* Colors of Category */
+
+.Management {
+    border-left: 4px solid var(--managment);
+}
+
+p.Management {
+    color: var(--managment);
+    border-left: unset;
+    font-size: 16px;
+}
+
+.Sales {
+    border-left: 4px solid var(--sales);
+}
+
+p.Sales {
+    color: var(--sales);
+    border-left: unset;
+    font-size: 16px;
+}
+
+.Product {
+    border-left: 4px solid var(--product);
+}
+
+p.Product {
+    color: var(--product);
+    border-left: unset;
+    font-size: 16px;
+}
+
+.Marketing {
+    border-left: 4px solid var(--marketing);
+}
+
+p.Marketing {
+    color: var(--marketing);
+    border-left: unset;
+    font-size: 16px;
+}
+
+.contentAvatar {
+    display: flex;
+    align-items: center;
+    min-width: 250px;
+}
+
+.iconAvatarBacklog {
+    width: 35px;
+    object-fit: cover;
+    border-radius: 100%;
+    border: 4px solid orange;
+    margin-right: 15px;
+}
+
+.contentCategory {
+    width: 240px;
+}
+
+.contentDescription {
+    width: 80%;
+}
+
+.contentEdit {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.iconBacklog {
+    width: 20px;
+    object-fit: contain;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.avatarBacklog {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 5px;
+}
+
+.mailContainer {
+    display: flex;
+    align-items: center;
+    width: 200px;
+}
+
+.dialog {
+    overflow: auto;
+}
+
+.sort {
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    color: gray;
+}
+
+#formbl {
+    background-color: var(--violet) !important;
+    overflow: auto;
+    width: 50%;
+    border-radius: 10px;
+    max-height: 97vh !important;
+}
+
+
+/* -----------------End region CSS for Backlog ----------------- */
+
+
+/*#region addTasks*/
+
+form label {
+    font-weight: bold;
+    color: var(--blue);
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    opacity: 0.6;
+    margin: 5px;
+}
+
+#avatars {
+    max-height: 80px;
+    overflow: auto;
+    /*white-space: nowrap;*/
+}
+
+.avatar:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.avatar-selected {
+    opacity: 1;
+    border: 4px solid var(--blue);
+}
+
+#form {
+    background-color: var(--violet);
+    border-radius: 10px;
+}
+
+textarea {
+    resize: none;
+}
+
+.btn-primary {
+    background-color: var(--blue);
+}
+
+#btn-create {
+    background-color: var(--blue);
+    border: 1px solid transparent;
+    font-weight: bold;
+    margin: 5px 2px;
+}
+
+#btn-create:hover {
+    background-color: unset;
+    color: var(--blue);
+    border: 1px solid;
+    transition: 225ms ease-in-out;
+}
+
+#cancel {
+    color: var(--blue);
+    font-weight: bold;
+    margin: 5px 2px;
+}
+
+#cancel:hover {
+    border: 1px solid;
+    transition: 225ms ease-in;
+}
+
+:root {
+    --blue: #203192;
+    --violet: #f4f2fb;
+    --managment: #892299;
+    --sales: #8b6969;
+    --product: #4faadf;
+    --marketing: #adb63a;
+    --low: green;
+    --high: red;
+    --medium: orange;
+    --mailblue: #248bf2;
+}
+
+#category,
+#curDate,
+#dueDate:hover {
+    cursor: pointer;
+}
+
+.d-none {
+    display: none;
+}
+
+#userNew-2,
+#userNew-3 {
+    object-fit: contain !important;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--blue);
+    border-radius: 5px;
+}
